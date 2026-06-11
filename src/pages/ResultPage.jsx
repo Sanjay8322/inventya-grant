@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle, Download, ShieldCheck, Users, ArrowRight, AlertTriangle, TrendingUp, X } from 'lucide-react';
 import { getGrantData } from '../utils/assessmentUtils';
 import { fadeUp, staggerContainer } from '../utils/animations';
+import logo from '../assets/logo.png';
 
 const fmt = (val) =>
   new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 }).format(val);
@@ -222,11 +223,8 @@ export const ResultPage = () => {
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <div className="bg-[#111827] text-white pt-16 pb-24 px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-3 my-6">
-            <div className="w-8 h-8 bg-[#00B7F5] rounded-md flex items-center justify-center">
-              <span className="text-white font-black text-sm">I</span>
-            </div>
-            <span className="text-white font-bold text-lg tracking-tight">inventya</span>
+          <div className="flex items-center justify-center my-6">
+            <img src={logo} alt="Inventya" className="h-10 w-auto object-contain" />
           </div>
 
           <p className="text-sm font-bold uppercase tracking-widest text-[#00B7F5] mb-4">Assessment Complete</p>
@@ -471,6 +469,47 @@ export const ResultPage = () => {
             <p className="font-bold text-blue-700 text-sm mb-1">De Minimis Threshold Exceeded</p>
             <p className="text-blue-600 text-sm leading-relaxed">
               Your previous public funding exceeds the £255,000 threshold. The programmes shown above are filtered to GBER-exempt and Horizon Europe routes only. Our team can advise on your full available landscape.
+            </p>
+          </motion.div>
+        )}
+
+        {flags?.complianceReview && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+            className="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8"
+          >
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+              <div>
+                <p className="font-bold text-amber-700 text-sm mb-1">De Minimis — Compliance Review Recommended</p>
+                <p className="text-amber-600 text-sm leading-relaxed">
+                  Your public funding position is unclear. We recommend a compliance review before applying to confirm you are within the £255,000 de minimis threshold and accessing the correct GBER-exempt routes. Contact our team to verify your subsidy control position.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+        {flags?.consortiumRequired && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+            className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8"
+          >
+            <p className="font-bold text-blue-700 text-sm mb-1">Consortium Partnership May Be Required</p>
+            <p className="text-blue-600 text-sm leading-relaxed">
+              As a large enterprise (250+ employees), many Innovate UK programmes require collaboration with an SME or academic partner. Our team can identify appropriate consortium structures and partners for your project to ensure programme eligibility.
+            </p>
+          </motion.div>
+        )}
+
+        {flags?.horizonNote && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+            className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8"
+          >
+            <p className="font-bold text-blue-700 text-sm mb-1">Horizon Europe / Eurostars Pathway</p>
+            <p className="text-blue-600 text-sm leading-relaxed">
+              As an EU-registered business, your primary routes are Horizon Europe and Eurostars — both shown in your matched programmes above. UK Innovate UK direct grants require UK registration, but collaborative Horizon Europe projects remain fully open to EU partners. Contact our Enterprise Europe Network team for international partnership brokerage.
             </p>
           </motion.div>
         )}

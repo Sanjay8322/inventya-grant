@@ -54,7 +54,15 @@ export const AssessmentContainer = () => {
   };
 
   const handleNext = (manualAnswer) => {
-    const answerToCheck = manualAnswer || answers[currentQ.id];
+    let answerToCheck = manualAnswer || answers[currentQ.id];
+
+    // Slider: visual defaultVal is shown but not stored until user interacts.
+    // Store the default so progression isn't blocked when slider is untouched.
+    if (currentQ.type === 'slider' && answerToCheck === undefined) {
+      answerToCheck = currentQ.defaultVal;
+      setAnswers((prev) => ({ ...prev, [currentQ.id]: currentQ.defaultVal }));
+    }
+
     if (currentQ.required && !answerToCheck) return;
 
     // Hard disqualifier check (Q1 / Q6)
