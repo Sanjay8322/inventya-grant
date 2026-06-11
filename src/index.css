@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #FFFFFF;
+    --secondary-cyan: #00B7F5;
+    --secondary-orange: #E4661D;
+    --dark: #000000;
+    --charcoal: #111827;
+    --font-main: 'Montserrat', sans-serif;
+  }
+
+  * {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom range slider styling */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  background: #e5e7eb;
+  border-radius: 9999px;
+  height: 8px;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #00B7F5;
+  margin-top: -6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,183,245,0.4);
+}
+input[type='range']::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #00B7F5;
+  cursor: pointer;
+  border: none;
+}
