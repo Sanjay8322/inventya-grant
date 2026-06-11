@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logo from '../../assets/logo.png';
 
 export const Navbar = ({ hideCta = false }) => {
   const navigate = useNavigate();
@@ -19,14 +20,8 @@ export const Navbar = ({ hideCta = false }) => {
       scrolled ? 'bg-black shadow-sm' : 'bg-black'
     } border-b border-gray-800 h-20 flex items-center`}>
       <div className="max-w-6xl mx-auto px-6 w-full flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 bg-[#00B7F5] rounded-md flex items-center justify-center">
-            <span className="text-white font-black text-sm">I</span>
-          </div>
-          <div>
-            <span className="text-white font-bold text-lg tracking-tight">inventya</span>
-            <span className="hidden md:block text-[10px] text-gray-500 font-medium uppercase tracking-widest">Grant Intelligence</span>
-          </div>
+        <Link to="/" className="flex items-center group">
+          <img src={logo} alt="Inventya" className="h-10 w-auto object-contain" />
         </Link>
 
         <div className="hidden md:flex items-center gap-6">

@@ -1,16 +1,14 @@
 import React from 'react';
 import { Shield } from 'lucide-react';
+import logo from '../../assets/logo.png';
 
 const Footer = () => {
   return (
     <footer className="bg-[#0A0F1A] text-gray-400 py-16 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-12">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-8 h-8 bg-[#00B7F5] rounded-md flex items-center justify-center">
-              <span className="text-white font-black text-sm">I</span>
-            </div>
-            <span className="text-white font-bold text-lg tracking-tight">inventya</span>
+          <div className="mb-4">
+            <img src={logo} alt="Inventya" className="h-10 w-auto object-contain" />
           </div>
           <p className="text-xs font-bold uppercase tracking-widest text-[#00B7F5] mb-4">Grant Intelligence & Innovation Funding</p>
           <p className="text-sm leading-relaxed">
