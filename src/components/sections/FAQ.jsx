@@ -6,19 +6,19 @@ import { ChevronDown } from 'lucide-react';
 const faqs = [
   {
     q: 'Is this tool really free? What\'s the catch?',
-    a: 'Completely free. No credit card, no account creation. You answer 10 questions and get your personalised result. We built this because we\'ve seen too many strong innovations die in the wrong funding queue. If your result shows you\'re a strong match, you\'ll have the option to book a call with our team — but that\'s entirely your choice.',
+    a: 'Completely free. No credit card, no account creation. You answer 10 questions and get your personalised result. We built this because we\'ve seen too many strong innovations die in the wrong funding queue. If your result shows you\'re a strong match, you\'ll have the option to book a call with our team - but that\'s entirely your choice.',
   },
   {
     q: 'How accurate is the funding estimate?',
-    a: 'The estimate is based on your company size, project cost, and Technology Readiness Level — the exact variables Innovate UK and Horizon Europe use to calculate intervention rates. We present a conservative-to-optimistic range rather than a single number, because every project has costs that funders may or may not classify as eligible. The estimate gives you a realistic picture, not a guarantee.',
+    a: 'The estimate is based on your company size, project cost, and Technology Readiness Level - the exact variables Innovate UK and Horizon Europe use to calculate intervention rates. We present a conservative-to-optimistic range rather than a single number, because every project has costs that funders may or may not classify as eligible. The estimate gives you a realistic picture, not a guarantee.',
   },
   {
     q: 'I already applied for a grant and got rejected. Is it worth trying again?',
-    a: 'Possibly — but the answer depends entirely on why you were rejected. The most common reason strong projects fail is structural positioning: wrong TRL stage, wrong programme, or an undeclared eligibility issue. Our tool will surface any structural barriers before you commit time to another application.',
+    a: 'Possibly - but the answer depends entirely on why you were rejected. The most common reason strong projects fail is structural positioning: wrong TRL stage, wrong programme, or an undeclared eligibility issue. Our tool will surface any structural barriers before you commit time to another application.',
   },
   {
     q: 'We\'re very early stage. Does this tool apply to us?',
-    a: 'Yes. The assessment routes early-stage projects to pre-grant pathways like feasibility funding, SMART: SCOTLAND, and alternative capital structures (SEIS/EIS, R&D Tax Credits). There are programmes for TRL 1 through 9 — the key is knowing which ones apply to your stage.',
+    a: 'Yes. The assessment routes early-stage projects to pre-grant pathways like feasibility funding, SMART: SCOTLAND, and alternative capital structures (SEIS/EIS, R&D Tax Credits). There are programmes for TRL 1 through 9 - the key is knowing which ones apply to your stage.',
   },
   {
     q: 'We\'ve already received some public funding. Does that disqualify us?',

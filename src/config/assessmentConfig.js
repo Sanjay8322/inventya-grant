@@ -120,7 +120,7 @@ export const assessmentConfig = {
           flag: "eic_accelerator",
         },
         {
-          label: "Our product is fully developed and commercially deployed — we need scaling capital (TRL 8–9)",
+          label: "Our product is fully developed and commercially deployed - we need scaling capital (TRL 8–9)",
           value: "trl_8_9",
           points: 5,
           trlRange: "TRL 8–9",
@@ -191,7 +191,7 @@ export const assessmentConfig = {
       type: "radio",
       options: [
         {
-          label: "It is a completely new, disruptive technology with genuine patent potential — nothing like it exists at scale",
+          label: "It is a completely new, disruptive technology with genuine patent potential - nothing like it exists at scale",
           value: "disruptive",
           points: 25,
           flag: null,
@@ -265,19 +265,19 @@ export const assessmentConfig = {
       type: "radio",
       options: [
         {
-          label: "Yes — fully secured via cash reserves, revenue, or committed private investment",
+          label: "Yes - fully secured via cash reserves, revenue, or committed private investment",
           value: "secured",
           points: 20,
           flag: null,
         },
         {
-          label: "Partially — we are in the process of raising or have some reserves",
+          label: "Partially - we are in the process of raising or have some reserves",
           value: "partial",
           points: 10,
           flag: null,
         },
         {
-          label: "No — we are relying entirely on the grant to proceed",
+          label: "No - we are relying entirely on the grant to proceed",
           value: "none",
           points: 0,
           flag: "match_funding_gap",
@@ -323,7 +323,7 @@ export const assessmentConfig = {
       type: "radio",
       options: [
         {
-          label: "Yes — we have confirmed collaborative partners already",
+          label: "Yes - we have confirmed collaborative partners already",
           value: "confirmed",
           points: 15,
           flag: "ktp_collaborative",
@@ -335,7 +335,7 @@ export const assessmentConfig = {
           flag: null,
         },
         {
-          label: "No — this is a solo company project",
+          label: "No - this is a solo company project",
           value: "solo",
           points: 3,
           flag: "consortium_note",

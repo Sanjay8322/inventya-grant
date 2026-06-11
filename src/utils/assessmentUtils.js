@@ -1,6 +1,6 @@
 // ============================================
 // FILE: src/utils/assessmentUtils.js
-// Grant Eligibility Scoring Engine — exact formulas from blueprint
+// Grant Eligibility Scoring Engine - exact formulas from blueprint
 // ============================================
 
 const ZOHO_FLOW_WEBHOOK_URL = import.meta.env.VITE_ZOHO_WEBHOOK_URL;
@@ -221,7 +221,7 @@ const matchProgrammes = (answers) => {
     candidates.unshift("ktp");
   }
 
-  // De minimis exceeded — only GBER / Horizon
+  // De minimis exceeded - only GBER / Horizon
   if (deminimis === "exceeded") {
     candidates = candidates.filter((p) =>
       ["horizon_general", "horizon_eurostars", "horizon_cleantech", "eic_accelerator", "horizon_digital"].includes(p)
@@ -229,7 +229,7 @@ const matchProgrammes = (answers) => {
     if (!candidates.includes("horizon_general")) candidates.push("horizon_general");
   }
 
-  // EU registration — steer to Horizon
+  // EU registration - steer to Horizon
   if (reg === "eu") {
     candidates = ["horizon_general", "horizon_eurostars", "horizon_cleantech", "eic_accelerator"];
   }
@@ -303,7 +303,7 @@ export const calculateGrantResult = (answers) => {
     else rawScore += reg.points;
   }
 
-  // Q6 UiD — check early (hard filter)
+  // Q6 UiD - check early (hard filter)
   const solvency = answers.solvency;
   if (solvency) {
     if (solvency.hardDisqualify) { hardDisqualify = true; disqualifyReason = "uid"; }
@@ -341,7 +341,7 @@ export const calculateGrantResult = (answers) => {
   const novelty = answers.novelty;
   if (novelty) rawScore += novelty.points;
 
-  // Q7 Project Cost — no direct score, stored for calculation
+  // Q7 Project Cost - no direct score, stored for calculation
   const projectCost = answers.project_cost || 250000;
 
   // Q8 Match Funding
@@ -409,7 +409,7 @@ const toFormEncoded = (obj) =>
 
 const sendToZoho = (payload) => {
   if (!ZOHO_FLOW_WEBHOOK_URL) {
-    console.warn("[Zoho] VITE_ZOHO_WEBHOOK_URL not set — skipping.");
+    console.warn("[Zoho] VITE_ZOHO_WEBHOOK_URL not set - skipping.");
     return;
   }
   const encoded = toFormEncoded(payload);

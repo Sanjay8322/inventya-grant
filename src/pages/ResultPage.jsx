@@ -1,6 +1,6 @@
 // ============================================
 // FILE: src/pages/ResultPage.jsx
-// All 4 Tier result variants — exact blueprint copy
+// All 4 Tier result variants - exact blueprint copy
 // ============================================
 
 import React, { useEffect, useState } from 'react';
@@ -17,7 +17,7 @@ const fmt = (val) =>
 const TierBadge = ({ tier, score }) => {
   const config = {
     TIER_1: { label: 'Strong Match', color: 'bg-green-500/20 text-green-400 border-green-500/30' },
-    TIER_2: { label: 'Good Potential — Gap Identified', color: 'bg-[#00B7F5]/20 text-[#00B7F5] border-[#00B7F5]/30' },
+    TIER_2: { label: 'Good Potential - Gap Identified', color: 'bg-[#00B7F5]/20 text-[#00B7F5] border-[#00B7F5]/30' },
     TIER_3: { label: 'Pre-Grant Stage', color: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30' },
     TIER_4: { label: 'Structural Barrier Identified', color: 'bg-red-500/20 text-red-400 border-red-500/30' },
   }[tier] || { label: '', color: '' };
@@ -103,15 +103,15 @@ const generatePDF = (data) => {
 </div>
 <h2>Your Profile</h2>
 <table>
-  <tr><td>Business Registration</td><td>${answers.registration?.label||'—'}</td></tr>
-  <tr><td>Company Size</td><td>${answers.company_size?.label||'—'}</td></tr>
-  <tr><td>TRL Stage</td><td>${answers.trl?.label||'—'}</td></tr>
-  <tr><td>Primary Sector</td><td>${answers.sector?.label||'—'}</td></tr>
-  <tr><td>Innovation Novelty</td><td>${answers.novelty?.label||'—'}</td></tr>
+  <tr><td>Business Registration</td><td>${answers.registration?.label||'-'}</td></tr>
+  <tr><td>Company Size</td><td>${answers.company_size?.label||'-'}</td></tr>
+  <tr><td>TRL Stage</td><td>${answers.trl?.label||'-'}</td></tr>
+  <tr><td>Primary Sector</td><td>${answers.sector?.label||'-'}</td></tr>
+  <tr><td>Innovation Novelty</td><td>${answers.novelty?.label||'-'}</td></tr>
   <tr><td>Project Cost Estimate</td><td>${fmt(answers.project_cost||0)}</td></tr>
-  <tr><td>Match Funding</td><td>${answers.match_funding?.label||'—'}</td></tr>
-  <tr><td>De Minimis Status</td><td>${answers.de_minimis?.label||'—'}</td></tr>
-  <tr><td>Collaboration</td><td>${answers.collaboration?.label||'—'}</td></tr>
+  <tr><td>Match Funding</td><td>${answers.match_funding?.label||'-'}</td></tr>
+  <tr><td>De Minimis Status</td><td>${answers.de_minimis?.label||'-'}</td></tr>
+  <tr><td>Collaboration</td><td>${answers.collaboration?.label||'-'}</td></tr>
 </table>
 <h2>Top Matched Programmes</h2>
 ${result.programmes.map((p,i)=>`<div class="prog"><h3>${i+1}. ${p.name}</h3><p><strong>Award Range:</strong> ${p.awardRange} | <strong>Match Funding:</strong> ${p.matchFunding} | <strong>Deadline:</strong> ${p.deadline}</p><p style="color:#6b7280;font-size:12px">${p.notes}</p></div>`).join('')}
@@ -164,27 +164,27 @@ export const ResultPage = () => {
     ctaText: 'Book a Free Grant Strategy Call with Inventya',
     ctaHref: 'https://inventya.zohobookings.eu/#/84877000004141028',
     ctaSecondary: 'Download Grant Application Checklist',
-    postCta: 'No obligation. This call is a diagnostic session — we\'ll tell you exactly which programme to target, what the application requires, and whether we\'re the right fit to write it.',
+    postCta: 'No obligation. This call is a diagnostic session - we\'ll tell you exactly which programme to target, what the application requires, and whether we\'re the right fit to write it.',
   };
 
   // ── TIER 2 content ──────────────────────────────────────────────────────────
   const tier2 = {
     headline: 'Your innovation has a strong case. One specific issue is reducing your score.',
     subheadline: 'Good news: this is fixable. Here is what we found:',
-    transitionCopy: 'This is not a dead end. Inventya\'s team specialises in exactly this situation — restructuring a strong concept to meet the specific programme criteria that will get it funded.',
-    ctaText: 'Book a Diagnostic Call — We\'ll Map the Path to Fundable',
+    transitionCopy: 'This is not a dead end. Inventya\'s team specialises in exactly this situation - restructuring a strong concept to meet the specific programme criteria that will get it funded.',
+    ctaText: 'Book a Diagnostic Call - We\'ll Map the Path to Fundable',
     ctaHref: 'https://inventya.zohobookings.eu/#/84877000004141028',
     ctaSecondary: 'Download the Consortium Building Guide',
   };
 
   // ── TIER 3 content ──────────────────────────────────────────────────────────
   const tier3 = {
-    headline: 'Your project is not yet positioned for major Innovate UK or Horizon grants — but that doesn\'t mean there\'s nothing available.',
+    headline: 'Your project is not yet positioned for major Innovate UK or Horizon grants - but that doesn\'t mean there\'s nothing available.',
     subheadline: 'Here is the honest picture:',
     paths: [
       {
         title: 'Alternative Capital',
-        body: 'R&D Tax Credits allow UK businesses spending on qualifying research and development to reclaim a percentage of that expenditure from HMRC — no match funding required, no application competition.',
+        body: 'R&D Tax Credits allow UK businesses spending on qualifying research and development to reclaim a percentage of that expenditure from HMRC - no match funding required, no application competition.',
       },
       {
         title: 'Feasibility Funding',
@@ -192,7 +192,7 @@ export const ResultPage = () => {
       },
       {
         title: '360 Financial Plan',
-        body: "Inventya's 360 Financial Plan maps your full funding landscape across grants, R&D Tax Credits, equity, and loan instruments simultaneously — so you're not dependent on a single route.",
+        body: "Inventya's 360 Financial Plan maps your full funding landscape across grants, R&D Tax Credits, equity, and loan instruments simultaneously - so you're not dependent on a single route.",
       },
     ],
     ctaText: 'Download Our 360 Financial Plan Overview',
@@ -204,9 +204,9 @@ export const ResultPage = () => {
   const tier4_uid = result.disqualifyReason === 'uid';
   const tier4 = {
     headline: 'Based on current UKRI and subsidy control regulations, your project does not currently qualify for direct innovation grant funding.',
-    subheadline: 'This is not a reflection of your innovation — it is a regulatory position.',
+    subheadline: 'This is not a reflection of your innovation - it is a regulatory position.',
     explanation: tier4_uid
-      ? 'Under UK and EU GBER rules, companies classified as an "Undertaking in Difficulty" — where accumulated losses exceed 50% of subscribed share capital — are legally ineligible for public grant funding. This is a statutory requirement, not a programme-specific decision.'
+      ? 'Under UK and EU GBER rules, companies classified as an "Undertaking in Difficulty" - where accumulated losses exceed 50% of subscribed share capital - are legally ineligible for public grant funding. This is a statutory requirement, not a programme-specific decision.'
       : 'Innovate UK funding requires that your business is UK-registered and that project outcomes are exploited within the UK economy. Without this, the core mandate of UKRI funding is not met.',
     alternatives: [
       'R&D Tax Credits (no grant funding required to qualify)',
@@ -268,7 +268,7 @@ export const ResultPage = () => {
               </div>
               <div className="bg-gray-800 border border-gray-700 p-5 rounded-xl">
                 <p className="text-xs text-gray-400 uppercase font-bold mb-1">Top Match</p>
-                <p className="text-sm font-bold text-[#00B7F5] mt-1">{programmes[0]?.name || '—'}</p>
+                <p className="text-sm font-bold text-[#00B7F5] mt-1">{programmes[0]?.name || '-'}</p>
               </div>
             </div>
           )}
@@ -452,7 +452,7 @@ export const ResultPage = () => {
             <div className="flex items-start gap-3">
               <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
               <div>
-                <p className="font-bold text-amber-700 text-sm mb-1">Innovation Novelty — Amber Warning</p>
+                <p className="font-bold text-amber-700 text-sm mb-1">Innovation Novelty - Amber Warning</p>
                 <p className="text-amber-600 text-sm leading-relaxed">
                   Your solution may be classified as commercial innovation rather than scientific/technical advancement under UKRI criteria. A consultation with our team can help reframe your narrative around the genuine technical challenges your project faced.
                 </p>
@@ -481,7 +481,7 @@ export const ResultPage = () => {
             <div className="flex items-start gap-3">
               <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
               <div>
-                <p className="font-bold text-amber-700 text-sm mb-1">De Minimis — Compliance Review Recommended</p>
+                <p className="font-bold text-amber-700 text-sm mb-1">De Minimis - Compliance Review Recommended</p>
                 <p className="text-amber-600 text-sm leading-relaxed">
                   Your public funding position is unclear. We recommend a compliance review before applying to confirm you are within the £255,000 de minimis threshold and accessing the correct GBER-exempt routes. Contact our team to verify your subsidy control position.
                 </p>
@@ -509,7 +509,7 @@ export const ResultPage = () => {
           >
             <p className="font-bold text-blue-700 text-sm mb-1">Horizon Europe / Eurostars Pathway</p>
             <p className="text-blue-600 text-sm leading-relaxed">
-              As an EU-registered business, your primary routes are Horizon Europe and Eurostars — both shown in your matched programmes above. UK Innovate UK direct grants require UK registration, but collaborative Horizon Europe projects remain fully open to EU partners. Contact our Enterprise Europe Network team for international partnership brokerage.
+              As an EU-registered business, your primary routes are Horizon Europe and Eurostars - both shown in your matched programmes above. UK Innovate UK direct grants require UK registration, but collaborative Horizon Europe projects remain fully open to EU partners. Contact our Enterprise Europe Network team for international partnership brokerage.
             </p>
           </motion.div>
         )}
@@ -532,7 +532,7 @@ export const ResultPage = () => {
                   ].map(([label, val]) => (
                     <li key={label} className="flex justify-between border-b border-gray-50 pb-2">
                       <span>{label}:</span>
-                      <span className="font-bold text-gray-900 max-w-[55%] text-right text-xs">{val || '—'}</span>
+                      <span className="font-bold text-gray-900 max-w-[55%] text-right text-xs">{val || '-'}</span>
                     </li>
                   ))}
                 </ul>
@@ -550,7 +550,7 @@ export const ResultPage = () => {
                   ].map(([label, val]) => (
                     <li key={label} className="flex justify-between border-b border-gray-50 pb-2">
                       <span>{label}:</span>
-                      <span className="font-bold text-gray-900 max-w-[55%] text-right text-xs">{val || '—'}</span>
+                      <span className="font-bold text-gray-900 max-w-[55%] text-right text-xs">{val || '-'}</span>
                     </li>
                   ))}
                 </ul>
@@ -577,7 +577,7 @@ export const ResultPage = () => {
             {[
               [CheckCircle, '£50M+ raised for UK innovators'],
               [CheckCircle, 'Innovate UK official delivery partner'],
-              [ShieldCheck, 'EEN member — 65+ country reach'],
+              [ShieldCheck, 'EEN member - 65+ country reach'],
               [Users, 'Full bid writing service included'],
             ].map(([Icon, text], i) => (
               <div key={i} className="flex flex-col items-center text-center">

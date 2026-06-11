@@ -1,6 +1,6 @@
 // ============================================
 // FILE: src/components/AssessmentContainer.jsx
-// Grant Eligibility quiz engine — identical design to Inventya HMRC tool
+// Grant Eligibility quiz engine - identical design to Inventya HMRC tool
 // ============================================
 
 import React, { useState } from 'react';

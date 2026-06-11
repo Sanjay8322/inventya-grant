@@ -9,7 +9,7 @@ const HowItWorks = () => {
       icon: MessageSquare,
       number: '01',
       title: 'Quick Assessment',
-      sub: '10 questions — under 3 minutes',
+      sub: '10 questions - under 3 minutes',
       body: 'Answer 10 questions about your project, company, and financial position. We cover everything UKRI and Horizon Europe assessors actually look at:',
       items: [
         'Business registration and geographic eligibility',
@@ -38,7 +38,7 @@ const HowItWorks = () => {
       number: '03',
       title: 'Personalised Results',
       sub: 'Your top 3 matched programmes',
-      body: 'See your Fundability Score, estimated grant range, and the three programmes best matched to your profile — plus the single biggest gap to close.',
+      body: 'See your Fundability Score, estimated grant range, and the three programmes best matched to your profile - plus the single biggest gap to close.',
       items: [
         'Top 3 matched programmes with award ranges',
         'Match funding requirements and next deadlines',

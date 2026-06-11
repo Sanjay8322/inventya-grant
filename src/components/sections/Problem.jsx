@@ -15,7 +15,7 @@ const Problem = () => {
     },
     {
       title: 'Hidden Disqualifiers',
-      body: 'The "Undertaking in Difficulty" clause is buried in regulatory guidance. If your accumulated losses have exceeded half your subscribed share capital, you are legally ineligible for most Innovate UK and EU programmes — no matter how strong your innovation is.',
+      body: 'The "Undertaking in Difficulty" clause is buried in regulatory guidance. If your accumulated losses have exceeded half your subscribed share capital, you are legally ineligible for most Innovate UK and EU programmes - no matter how strong your innovation is.',
     },
     {
       title: 'De Minimis Exhaustion',

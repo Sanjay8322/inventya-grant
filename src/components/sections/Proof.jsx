@@ -20,7 +20,7 @@ const Proof = () => {
       quote: null,
       name: null,
       title: null,
-      body: 'A patient choice platform in the health sector was able to secure a £135,000 grant with Inventya\'s support — correctly positioned against NIHR criteria.',
+      body: 'A patient choice platform in the health sector was able to secure a £135,000 grant with Inventya\'s support - correctly positioned against NIHR criteria.',
     },
     {
       company: 'Proveca',
@@ -29,7 +29,7 @@ const Proof = () => {
       quote: null,
       name: null,
       title: null,
-      body: 'Inventya provided proof-of-market research into paediatric medicines that directly led to £2.6M in venture capital investment — demonstrating that expert positioning is as valuable for equity raises as it is for grants.',
+      body: 'Inventya provided proof-of-market research into paediatric medicines that directly led to £2.6M in venture capital investment - demonstrating that expert positioning is as valuable for equity raises as it is for grants.',
     },
     {
       company: 'Inclusive Designs',
@@ -38,7 +38,7 @@ const Proof = () => {
       quote: '"Inventya combines experience across industries to provide industry-leading bid writing and grant funding support. They act as a critical friend to make sure your proposition is truly ground-breaking."',
       name: null,
       title: 'inventya.com',
-      body: 'A full-stack innovation funding engagement: Innovate UK grant funding, business plan preparation, and R&D Tax Credits — all managed by one team.',
+      body: 'A full-stack innovation funding engagement: Innovate UK grant funding, business plan preparation, and R&D Tax Credits - all managed by one team.',
     },
   ];
 

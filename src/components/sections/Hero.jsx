@@ -19,7 +19,7 @@ const Hero = () => {
 
           <motion.div variants={fadeUp}>
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#00B7F5] bg-[#00B7F5]/10 px-4 py-2 rounded-full mb-6">
-              2026 Grant Eligibility Engine — Free, No Account Needed
+              2026 Grant Eligibility Engine - Free, No Account Needed
             </span>
           </motion.div>
 
@@ -34,7 +34,7 @@ const Hero = () => {
 
           <motion.div variants={fadeUp} className="max-w-2xl mx-auto mb-10">
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-medium">
-              Innovate UK rejects 98% of Smart Grant applications. Our eligibility engine scans 500+ active grants against your project profile and shows you exactly where you stand — before you spend months writing an application.
+              Innovate UK rejects 98% of Smart Grant applications. Our eligibility engine scans 500+ active grants against your project profile and shows you exactly where you stand - before you spend months writing an application.
             </p>
           </motion.div>
 
